@@ -75,6 +75,7 @@
 	#endif
 
 	#pragma warning(disable:4018)
+	#pragma warning(disable:4091)
 	#pragma warning(disable:4099)
 	#pragma warning(disable:4224)
 	#pragma warning(disable:4244)
@@ -83,6 +84,7 @@
 	#pragma warning(disable:4273)
 	#pragma warning(disable:4305)
 	#pragma warning(disable:4309)
+	#pragma warning(disable:4319)
 	#pragma warning(disable:4786) // msvc too long debug names in stl
 	#pragma warning(disable:4800)
 	#pragma warning(disable:4996) // '_ftime64' : this function or variable may be unsafe

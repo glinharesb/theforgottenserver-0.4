@@ -18,21 +18,24 @@
 #ifndef __LUASCRIPT__
 #define __LUASCRIPT__
 #include "otsystem.h"
-#ifdef __LUAJIT__
-#include <lua.hpp>
 
+#if defined(__ALT_LUA_PATH__)
 extern "C"
 {
-	#include <lauxlib.h>
-	#include <lualib.h>
+	#include <lua5.1/lua.h>
+	#include <lua5.1/lauxlib.h>
+	#include <lua5.1/lualib.h>
 }
 #else
-
 extern "C"
 {
-	#include "lua.h"
-	#include "lualib.h"
-	#include "lauxlib.h"
+	#include <lua.h>
+	#include <lauxlib.h>
+	#include <lualib.h>
+
+	#ifdef __LUAJIT__
+	#include <luajit.h>
+	#endif
 }
 #endif
 
