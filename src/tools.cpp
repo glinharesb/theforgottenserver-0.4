@@ -353,13 +353,12 @@ bool hasBitSet(uint32_t flag, uint32_t flags)
 }
 
 #if !defined(_MSC_VER) || _MSC_VER < 1800
-int32_t round(float v)
+double round(double v)
 {
-	int32_t t = (int32_t)std::floor(v);
-	if((v - t) > 0.5)
-		return t + 1;
-
-	return t;
+	if(v >= 0.0)
+		return std::floor(v + 0.5);
+	else
+		return std::ceil(v - 0.5);
 }
 #endif
 
